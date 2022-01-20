@@ -448,6 +448,12 @@ img {
 
 /* ============================  Global style end  ========================== 
    ========================================================================== */
+body {
+  font-size: 18px;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+}
+
 .hide-scroll {
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -483,16 +489,17 @@ img {
           justify-content: center;
 }
 
-/* container max width -------------------  */
-.wrapper * {
-  padding: 24px 0;
+.heading {
+  margin-bottom: 26px;
+  font-weight: 600;
 }
 
+/* container max width -------------------  */
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
-  max-width: 1160px;
+  max-width: 1110px;
 }
 
 .header {
