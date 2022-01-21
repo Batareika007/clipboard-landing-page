@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'global';
+@import 'colors';
 
 body {
     font-size: 18px;
@@ -36,7 +37,66 @@ body {
     margin-bottom: 26px;
     font-weight: 600;
     text-align: center;
+    font-size: 3rem;
+    color: $heading;
 }
+
+p {
+    color: $text;
+    text-align: center;
+    margin: 0 auto 30px;
+    line-height: 2rem;
+
+}
+
+a.btn {
+    display: inline-block;
+    color: white;
+    line-height: 2.7rem;
+    padding: 0 20px;
+    border-radius: 28px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-ios {
+    background-color: $buttoniOS-bg;
+    border-bottom: 2px solid hsl(171, 66%, 25%);
+    box-shadow: 0px 3px 6px 1px hsla(171, 66%, 44%, 0.7);
+
+    &:active {
+        box-shadow: inset 0px 1px 3px 1px hsl(171, 66%, 25%);
+    }
+}
+
+.btn-mac {
+    color: white;
+    background-color: $buttonMac-bg;
+    border-bottom: 2px solid hsl(233, 100%, 25%);
+    box-shadow: 0px 3px 6px 1px hsla(233, 100%, 69%, 0.7);
+
+    &:active {
+        box-shadow: inset 0px 1px 3px 1px hsl(233, 100%, 25%);
+    }
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active {
+    position: relative;
+    bottom: -3px;
+    border-bottom: 0px;
+}
+
+.buttons {
+    margin: 0 auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* container max width -------------------  */
 
@@ -44,21 +104,181 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
-    max-width: 1110px;
+    padding: 0 15px;
+    max-width: 1145px;
 }
 
 .header {
-    margin: 0 auto;
+    background-image: url(../images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-bottom: 160px;
+
+    .logo {
+        margin: 131px auto 64px;
+
+        &__link {
+            height: 125px;
+            width: 125px;
+        }
+    }
+
+    p {
+        max-width: 650px;
+    }
 }
+
+
 
 /* main -------------------  */
 .main {
-    margin: 0 auto;
+    // margin: 0 auto;
     flex: 1 1 auto;
 }
 
+.section {
+    margin-bottom: 80px;
+
+    p {
+        max-width: 700px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.section__list {
+    background-image: url(../images/image-computer.png);
+    background-repeat: no-repeat;
+    background-position: -200px;
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 580px;
+    margin-bottom: 155px;
+
+    ul {
+        max-width: 335px;
+
+        li {
+            margin-bottom: 60px;
+        }
+    }
+
+    h6 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h6,
+    p {
+        text-align: left;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 165px;
+
+    &__item {
+        text-align: center;
+        flex: 0 0 350px;
+
+        img {
+            margin-bottom: 35px;
+            height: 40px;
+            width: auto;
+        }
+
+        .heading {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 57px
+    margin-bottom: 165px;
+}
+
+.bottom-section {
+    p {
+        margin-bottom: 40px;
+    }
+}
+
 /* footer -------------------  */
-.footer {
+.footer-section {
     margin: 0 auto;
+    background-color: #F5F6F8;
+    padding: 44px 0 0;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    flex-wrap: wrap;
+
+    .logo {
+        height: inherit;
+        margin-right: 130px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .links {
+        height: 55px;
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $heading;
+
+        a:hover {
+            color: $hover-color;
+        }
+    }
+
+    .social__links {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        a:not(:last-child) {
+            margin-right: 22px;
+        }
+
+        a:hover {
+            svg path {
+                fill: $hover-color;
+            }
+        }
+    }
+}
+
+footer {
+    padding-top: 20px;
 }
