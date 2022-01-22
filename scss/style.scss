@@ -95,7 +95,6 @@ a.btn {
     max-width: 400px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 
@@ -153,21 +152,28 @@ a.btn {
 }
 
 .section__list {
-    background-image: url(../images/image-computer.png);
-    background-repeat: no-repeat;
-    background-position: -200px;
-    background-size: auto 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    min-height: 580px;
     margin-bottom: 155px;
+    height: 550px;
+
+    &_img {
+        position: relative;
+        right: 10%;
+        height: auto;
+
+        img {
+            height: 100%;
+
+        }
+    }
 
     ul {
-        max-width: 335px;
+        flex: 0 1 555px;
 
-        li {
+        li:not(:last-child) {
             margin-bottom: 60px;
         }
     }
@@ -189,7 +195,7 @@ a.btn {
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 165px;
     flex-wrap: wrap;
 
@@ -239,11 +245,11 @@ a.btn {
     display: flex;
     align-items: center;
     height: 65px;
-    flex-wrap: wrap;
 
     .logo {
         height: inherit;
-        margin-right: 130px;
+        margin-right: 12%;
+        flex: 0 0 auto;
 
         img {
             height: 100%;
@@ -284,3 +290,5 @@ a.btn {
 footer {
     padding-top: 20px;
 }
+
+@import 'mediaQuery';
