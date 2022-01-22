@@ -173,6 +173,11 @@ a.btn {
     ul {
         flex: 0 1 555px;
 
+        li {
+
+            max-width: 340px;
+        }
+
         li:not(:last-child) {
             margin-bottom: 60px;
         }

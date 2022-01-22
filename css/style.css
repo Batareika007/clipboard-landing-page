@@ -643,6 +643,10 @@ a.btn {
           flex: 0 1 555px;
 }
 
+.section__list ul li {
+  max-width: 340px;
+}
+
 .section__list ul li:not(:last-child) {
   margin-bottom: 60px;
 }
